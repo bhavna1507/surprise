@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Bhavna 💕</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Background Music - Envelope Click -->
+    <audio id="envelopeMusic" loop>
+        <source src="Apna Bana Le Bhediya 128 Kbps.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Background Music - Yes Click -->
+    <audio id="bgMusic" loop>
+        <source src="Sang-Rahiyo.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating Hearts Background -->
+    <div class="hearts-container" id="hearts"></div>
+
+    <!-- Landing Section -->
+    <section class="landing" id="landing">
+        <div class="envelope" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body">
+                <div class="letter">
+                    <p class="letter-text">A special message awaits you...</p>
+                </div>
+            </div>
+            <p class="click-hint">Click to open 💌</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="title">
+                    <span class="title-line">Dear</span>
+                    <span class="name-highlight">Bhavna</span>
+                </h1>
+                <div class="heart-divider">
+                    <span class="heart-icon">💕</span>
+                </div>
+                <p class="subtitle typewriter" id="typewriter"></p>
+            </div>
+        </section>
+
+        <!-- Journey Section -->
+        <section class="journey-section">
+            <h2 class="section-title">Our Journey Together 💕✨</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">💖</div>
+                        <h3>The Day We Met</h3>
+                        <p>The universe aligned to bring us together, and my life changed forever.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">💬</div>
+                        <h3>First Conversation</h3>
+                        <p>Every word you spoke felt like music to my ears.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">💜</div>
+                        <h3>Falling For You</h3>
+                        <p>Without even realizing, you became my favorite thought.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">✨</div>
+                        <h3>Today</h3>
+                        <p>Ready to take the biggest step of my life...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reasons Section -->
+        <section class="reasons-section">
+            <h2 class="section-title">Why You're Special to Me 💖</h2>
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <div class="reason-icon">😊</div>
+                    <h3>Your Smile</h3>
+                    <p>It lights up my entire world and makes everything better.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">💭</div>
+                    <h3>Your Mind</h3>
+                    <p>Your thoughts and ideas inspire me every single day.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">❤️</div>
+                    <h3>Your Heart</h3>
+                    <p>So kind, so pure, so full of love for everyone.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">🌙</div>
+                    <h3>Your Soul</h3>
+                    <p>The most beautiful soul I've ever encountered.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">😂</div>
+                    <h3>Your Laugh</h3>
+                    <p>The most melodious sound in the entire universe.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">🦋</div>
+                    <h3>Everything</h3>
+                    <p>Every little thing about you is perfect to me.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Big Question -->
+        <section class="proposal-section" id="proposalSection">
+            <div class="proposal-content">
+                <div class="ring-box" id="ringBox">
+                    <div class="ring-box-lid"></div>
+                    <div class="ring-box-base">
+                        <div class="ring">💍</div>
+                    </div>
+                </div>
+
+                <h2 class="proposal-title">Bhavna...</h2>
+                <p class="proposal-text">
+                    You are the missing piece I never knew I was looking for.<br>
+                    With you, every moment feels like a beautiful dream.<br>
+                    I want to spend every sunrise and sunset with you.
+                </p>
+
+                <div class="question-container">
+                    <h1 class="big-question">Will You Be Mine Forever 💕</h1>
+                </div>
+
+                <div class="response-buttons">
+                    <button class="btn btn-yes" id="yesBtn">Yes! </button>
+                    <button class="btn btn-no" id="noBtn">Let me think...</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Celebration Section (Hidden Initially) -->
+        <section class="celebration-section" id="celebration">
+            <div class="confetti-container" id="confetti"></div>
+            <div class="celebration-content">
+                <h1 class="celebration-title">You Said YES! 🎉💕</h1>
+                <div class="hearts-explosion" id="heartsExplosion"></div>
+                <p class="celebration-text">
+                    This is the happiest moment of my life!<br>
+                    I promise to love you, cherish you, and make you smile every single day.<br>
+                    Our forever starts now! 💕
+                </p>
+                <div class="love-meter">
+                    <div class="love-meter-fill"></div>
+                    <span class="love-meter-text">Love: ∞%</span>
+                </div>
+                <div class="future-together">
+                    <h2>Our Future Together 💕</h2>
+                    <div class="future-icons">
+                        <span class="future-icon">🏠</span>
+                        <span class="future-icon">💕</span>
+                        <span class="future-icon">✈️</span>
+                        <span class="future-icon">⭐</span>
+                        <span class="future-icon">💜</span>
+                    </div>
+                    <p>Adventures, memories, and a lifetime of love awaits us!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Audio (Optional Background Music) -->
+    <audio id="bgMusic" loop>
+        <source src="romantic-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
