@@ -842,8 +842,17 @@ body::before {
 
 .ring {
     font-size: 3rem;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease 0.3s, transform 0.5s ease 0.3s;
+    filter: drop-shadow(0 0 20px var(--golden));
+}
+
+.ring-box:hover .ring,
+.ring-box.open .ring {
+    opacity: 1;
+    transform: translateY(0);
     animation: ringGlow 2s infinite, ringFloat 3s ease-in-out infinite;
-    filter: drop-shadow(0 0 20px var(--gold));
 }
 
 @keyframes ringGlow {
@@ -1750,75 +1759,6 @@ body::before {
     .sparkle {
         width: 8px;
         height: 8px;
-    }
-}
-
-/* ===== MOBILE PERFORMANCE OPTIMIZATIONS ===== */
-@media (max-width: 768px) {
-
-    /* Disable heavy backdrop-filter on mobile for better performance */
-    .timeline-content,
-    .reason-card,
-    .letter {
-        backdrop-filter: none !important;
-        -webkit-backdrop-filter: none !important;
-        background: rgba(30, 15, 35, 0.95) !important;
-    }
-
-    /* Reduce animation complexity */
-    body::before {
-        animation: none !important;
-        opacity: 0.5;
-    }
-
-    .hero::before,
-    .landing::before {
-        animation: none !important;
-    }
-
-    /* Simpler floating heart animations */
-    .floating-heart {
-        filter: none !important;
-        animation-timing-function: linear !important;
-    }
-
-    /* Reduce glow effects */
-    .name-highlight,
-    .celebration-title,
-    .big-question,
-    .section-title {
-        filter: none !important;
-    }
-
-    /* Simplify card hover effects */
-    .timeline-content:hover,
-    .reason-card:hover {
-        transform: translateY(-5px) !important;
-        box-shadow: 0 10px 30px rgba(255, 20, 147, 0.2) !important;
-    }
-
-    /* Reduce envelope shadow */
-    .envelope {
-        filter: drop-shadow(0 15px 25px rgba(255, 20, 147, 0.3)) !important;
-    }
-
-    /* Use GPU acceleration */
-    .floating-heart,
-    .envelope,
-    .letter,
-    .timeline-content,
-    .reason-card {
-        will-change: transform;
-        transform: translateZ(0);
-    }
-
-    /* Disable confetti/hearts explosion on very small screens */
-    @media (max-width: 400px) {
-
-        .confetti-container,
-        .hearts-explosion {
-            display: none !important;
-        }
     }
 }
 

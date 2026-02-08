@@ -9,7 +9,6 @@ const yesBtn = document.getElementById('yesBtn');
 const noBtn = document.getElementById('noBtn');
 const celebration = document.getElementById('celebration');
 const proposalSection = document.getElementById('proposalSection');
-const ringBox = document.getElementById('ringBox');
 const confettiContainer = document.getElementById('confetti');
 const heartsExplosion = document.getElementById('heartsExplosion');
 
@@ -17,28 +16,22 @@ const heartsExplosion = document.getElementById('heartsExplosion');
 const typewriterText = "Every moment with you is a beautiful dream come true... 💕";
 let charIndex = 0;
 
-// ===== Create Floating Hearts (Mobile Optimized) =====
+// ===== Create Floating Hearts =====
 function createFloatingHearts() {
-    const hearts = ['💕', '💖', '💗', '💜', '💝'];
-    const isMobile = window.innerWidth <= 768;
-    const interval = isMobile ? 1500 : 800; // Slower on mobile
-    const maxHearts = isMobile ? 8 : 15; // Fewer hearts on mobile
+    const hearts = ['💕', '💖', '💗', '💕', '💜', '💝', '✨', '🩷', '💓', '💞'];
 
     setInterval(() => {
-        // Limit total hearts on screen
-        if (heartsContainer.children.length >= maxHearts) return;
-
         const heart = document.createElement('span');
         heart.className = 'floating-heart';
         heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
         heart.style.left = Math.random() * 100 + 'vw';
-        heart.style.fontSize = (Math.random() * 15 + 12) + 'px';
-        heart.style.animationDuration = (Math.random() * 3 + 5) + 's';
+        heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
+        heart.style.animationDuration = (Math.random() * 4 + 6) + 's';
         heartsContainer.appendChild(heart);
 
         // Remove heart after animation
-        setTimeout(() => heart.remove(), 8000);
-    }, interval);
+        setTimeout(() => heart.remove(), 10000);
+    }, 500);
 }
 
 // ===== Create Sparkles =====
@@ -82,11 +75,6 @@ function startTypewriter() {
         setTimeout(startTypewriter, 80);
     }
 }
-
-// ===== Ring Box Interaction =====
-ringBox.addEventListener('click', () => {
-    ringBox.classList.toggle('open');
-});
 
 // ===== Yes Button Handler =====
 yesBtn.addEventListener('click', () => {
